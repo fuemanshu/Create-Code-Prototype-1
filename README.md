@@ -6,3 +6,6 @@ For learning and reference only.
 Focuses on:
 - Player movement and input
 - Camera that follows player
+
+This also contains the code for Challenge 1 - Plane Programming
+
