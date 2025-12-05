@@ -9,3 +9,4 @@ Focuses on:
 
 This also contains the code for Challenge 1 - Plane Programming
 
+Project is found in personal computer in Sync folder.
