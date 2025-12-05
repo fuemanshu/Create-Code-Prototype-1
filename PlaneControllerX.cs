@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlaneControllerX : MonoBehaviour
 {
     // speed of plane
-    private float speed = 30.0f;
+    private float speed = 35.0f;
 
     // plane tilt speed
     private float rotationSpeed = 100.0f;
