@@ -2,9 +2,6 @@ using UnityEngine;
 
 public class Propeller : MonoBehaviour
 {
-    // set propeller game obejct - without having to write a new script
-    // public GameObject propeller;
-
     // plane propeller rotation variable
     private float propellerRotationSpeed = 2500.0f;
 
