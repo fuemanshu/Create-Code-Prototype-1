@@ -4,16 +4,16 @@ public class PlayerController : MonoBehaviour
 {
 
     // Player movement speed
-    public float playerSpeed = 15.0f;
+    private float playerSpeed = 15.0f;
 
     // player turn speed
-    public float playerTurnSpeed = 5.0f;
+    private float playerTurnSpeed = 45.0f;
 
     // player input variable for movement
-    public float playerHorizontalInput;
+    private float playerHorizontalInput;
 
     // player forward and backward movement speed and input
-    public float playerForwardInput;
+    private float playerForwardInput;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,9 +30,11 @@ public class PlayerController : MonoBehaviour
 
         // Move vehicle forward, at a reasonable realistic speed 
         // transform.Translate(Vector3.forward * Time.deltaTime * playerSpeed);  // this version moves the player automatically
-        transform.Translate(Vector3.forward * Time.deltaTime * playerSpeed * playerForwardInput);  // this version moves when player input is received
+        transform.Translate(Vector3.forward * Time.deltaTime * playerSpeed * playerForwardInput);  // this version moves based on player input
 
         // player turn movement
-        transform.Translate(Vector3.right * Time.deltaTime * playerTurnSpeed * playerHorizontalInput);
+        // transform.Translate(Vector3.right * Time.deltaTime * playerTurnSpeed * playerHorizontalInput);   // this movement slides player left and right
+        // rotate vehicle during horizontal movement instead of sliding
+        transform.Rotate(Vector3.up, playerTurnSpeed * playerHorizontalInput * Time.deltaTime);             // this movement rotates player/object
     }
 }
